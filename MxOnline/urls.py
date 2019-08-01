@@ -14,17 +14,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path,include,re_path
+from django.urls import path, include, re_path
 import xadmin
-from django.views.generic import TemplateView
-from users.views import LoginView,RegisterView,ActiveUserView,ForgetpwdView,ResetView,ModifyPwdView,LogoutView
-from organization.views import OrgView
+from users.views import LoginView, RegisterView, ActiveUserView, ForgetpwdView, ResetView, \
+    ModifyPwdView, LogoutView
 from django.views.static import serve
 
 from users.views import IndexView
-from MxOnline.settings import MEDIA_ROOT,STATIC_ROOT
+from MxOnline.settings import MEDIA_ROOT, STATIC_ROOT
 from django.views import static
-from users.views import page_not_found,page_error
+from users.views import page_not_found, page_error
 
 
 urlpatterns = [
@@ -54,6 +53,9 @@ urlpatterns = [
 
     # 个人中心相关url配置
     path('users/', include('users.urls',namespace='users')),
+
+    #富文本相关url
+    path('ueditor/',include('DjangoUeditor.urls' )),
 
 ]
 

@@ -16,10 +16,12 @@
 </section>
 {% endblock %}
 {% block custom_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/muke/base.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/muke/common-less.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/muke/course/learn-less.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/muke/course/common-less.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/muke/base.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/muke/common-less.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/muke/course/learn-less.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/aui.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mooc.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/muke/course/common-less.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -108,9 +110,9 @@
                             <a href="/u/315464/courses?sort=publish" target="_blank">
                                 <img src='{{ MEDIA_URL }}{{ course.teacher.image }}' width='80' height='80' />
                             </a>
-        <span class="tit">
-          <a href="/u/315464/courses?sort=publish" target="_blank">{{ course.teacher.name }}</a>
-        </span>
+                            <span class="tit">
+                              <a href="/u/315464/courses?sort=publish" target="_blank">{{ course.teacher.name }}</a>
+                            </span>
                             <span class="job">{{ course.teacher.work_position }}</span>
                         </div>
                         <div class="course-info-tip">
