@@ -28,7 +28,7 @@ SECRET_KEY = 'us9ctl^!510+o9blu#urkbse^(5jdsrt(3c-_5pwgf830yg(f+'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.taohuanyuan.site']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.taohuayuan.fun']
 # Application definition
 
 AUTHENTICATION_BACKENDS = (
